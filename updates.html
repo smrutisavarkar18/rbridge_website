@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regulatory Updates | RBridge Lifesciences Pvt Ltd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link">
+      <img src="images/logo.png" alt="RBridge Lifesciences" class="site-logo" />
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="has-dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Services <span class="caret">▾</span></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-group-label">Regulatory Affairs – Global</li>
+            <li><a href="services/eu-gmp.html">EU GMP</a></li>
+            <li><a href="services/eu-maa.html">EU MAA</a></li>
+            <li><a href="services/tga.html">TGA (Australia)</a></li>
+            <li><a href="services/usfda.html">USFDA</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-group-label">Regulatory Affairs – Regional</li>
+            <li><a href="services/pics.html">PIC/S Countries</a></li>
+            <li><a href="services/india.html">India Regulatory</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-group-label">Global Regulatory Services</li>
+            <li><a href="services/global-regulatory.html">Global Regulatory Services</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-group-label">Dossier &amp; Documentation</li>
+            <li><a href="services/dossier-compilation.html">Regulatory Dossier Compilation</a></li>
+            <li><a href="services/dmf-cep-asmf.html">DMF / CEP / ASMF</a></li>
+            <li><a href="services/medical-writing.html">Medical Writing</a></li>
+            <li><a href="services/ectd.html">eCTD Building &amp; Compilation</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-group-label">Quality &amp; Compliance</li>
+            <li><a href="services/regulatory-compliance.html">Regulatory Compliance</a></li>
+            <li><a href="services/qms.html">Quality Management System</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-group-label">Audits &amp; Remediation</li>
+            <li><a href="services/third-party-audits.html">Third Party Audits</a></li>
+            <li><a href="services/data-integrity.html">Data Integrity Audits</a></li>
+            <li><a href="services/remediation.html">Remediation Action Plans</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#" class="nav-link dropdown-toggle active">Regulatory Intelligence <span class="caret">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="updates.html">Regulatory Updates</a></li>
+            <li><a href="guidelines.html">Regulations &amp; Guidelines</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Publishing &amp; Submission <span class="caret">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="publishing/global-ectd.html">Global eCTD Submission</a></li>
+            <li><a href="publishing/nees.html">NeeS Submission</a></li>
+            <li><a href="publishing/paper.html">Paper Submission</a></li>
+            <li><a href="publishing/asmf.html">Active Substance Master File Submission</a></li>
+            <li><a href="publishing/cep.html">Certificate of Suitability (CEP) Submission</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="section-eyebrow">Regulatory Intelligence</p>
+    <h1 class="page-hero-title">Regulatory Updates</h1>
+    <p class="page-hero-desc">Live regulatory intelligence from USFDA, EMA, CDSCO, TGA, and other global health authorities. Updated automatically.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="updates-page-grid">
+      <div>
+        <!-- Filter bar -->
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;" id="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="USFDA">USFDA</button>
+          <button class="filter-btn" data-filter="EMA">EMA</button>
+          <button class="filter-btn" data-filter="CDSCO">CDSCO</button>
+          <button class="filter-btn" data-filter="TGA">TGA</button>
+          <button class="filter-btn" data-filter="WHO">WHO</button>
+          <button class="filter-btn" data-filter="PIC/S">PIC/S</button>
+        </div>
+
+        <div class="updates-list" id="updates-list">
+          <div class="updates-loading">Fetching latest regulatory updates…</div>
+        </div>
+
+        <button id="load-more-btn" class="btn btn-outline" style="margin-top:2rem;display:none;">Load More Updates</button>
+      </div>
+
+      <aside class="service-sidebar">
+        <div class="sidebar-box">
+          <h4>Sources Monitored</h4>
+          <div class="sidebar-links">
+            <a href="https://www.fda.gov/drugs/guidance-compliance-regulatory-information" target="_blank" rel="noopener">USFDA – Drug Guidance</a>
+            <a href="https://www.ema.europa.eu/en/human-regulatory/overview/public-health-threats" target="_blank" rel="noopener">EMA – Human Regulatory</a>
+            <a href="https://cdsco.gov.in/opencms/opencms/en/Notifications/Notifications/" target="_blank" rel="noopener">CDSCO – Notifications</a>
+            <a href="https://www.tga.gov.au/news/latest-news" target="_blank" rel="noopener">TGA – Latest News</a>
+            <a href="https://www.who.int/medicines/areas/quality_safety/quality_assurance/en/" target="_blank" rel="noopener">WHO – Medicines Quality</a>
+            <a href="https://picscheme.org/en/news" target="_blank" rel="noopener">PIC/S – News</a>
+          </div>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Need Guidance?</h4>
+          <p>Our team can help you interpret and act on new regulatory requirements.</p>
+          <a href="contact.html" class="btn btn-white">Speak to Us</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="RBridge Lifesciences" style="height:36px;filter:brightness(0) invert(1);opacity:0.85;margin-bottom:0.5rem;" />
+      <p class="footer-tagline">Your Trusted Regulatory Partner</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services/eu-gmp.html">EU GMP</a></li><li><a href="services/usfda.html">USFDA</a></li><li><a href="services/third-party-audits.html">Third Party Audits</a></li></ul></div>
+      <div class="footer-col"><h4>Intelligence</h4><ul><li><a href="updates.html">Regulatory Updates</a></li><li><a href="guidelines.html">Regulations &amp; Guidelines</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@rbridge.in">info@rbridge.in</a></li><li><a href="mailto:santosh.savarkar@rbridge.in">santosh.savarkar@rbridge.in</a></li><li><a href="tel:+918980031110">+91 89800 31110</a></li><li class="footer-address">Tropical Palms CHS, Wakad, Pune 411057</li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>&copy; 2025 RBridge Lifesciences Private Limited. All rights reserved.</p></div></div>
+</footer>
+
+<style>
+.filter-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--grey-mid);
+  border-radius: 99px;
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--grey-text);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover { border-color: var(--navy); color: var(--navy); }
+.filter-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+</style>
+
+<script src="main.js"></script>
+<script>
+(async function loadUpdates() {
+  const list = document.getElementById('updates-list');
+  let allUpdates = [];
+  let currentFilter = 'all';
+
+  function escapeHtml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function renderUpdates(updates) {
+    if (!updates.length) {
+      list.innerHTML = '<p style="color:var(--grey-text);padding:2rem 0;">No updates found for this filter.</p>';
+      return;
+    }
+    list.innerHTML = updates.map(u => `
+      <div class="update-card" data-source="${escapeHtml(u.source)}">
+        <p class="update-source">${escapeHtml(u.source)}</p>
+        <p class="update-title">${escapeHtml(u.title)}</p>
+        <p class="update-summary">${escapeHtml(u.summary)}</p>
+        <p class="update-date">${escapeHtml(u.date)}</p>
+      </div>
+    `).join('');
+  }
+
+  function applyFilter(filter) {
+    currentFilter = filter;
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.filter === filter);
+    });
+    const filtered = filter === 'all' ? allUpdates : allUpdates.filter(u => u.source === filter);
+    renderUpdates(filtered);
+  }
+
+  document.getElementById('filter-bar').addEventListener('click', e => {
+    if (e.target.classList.contains('filter-btn')) {
+      applyFilter(e.target.dataset.filter);
+    }
+  });
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1000,
+        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+        messages: [{
+          role: 'user',
+          content: `Search for the 8 most recent regulatory updates (last 60 days) from USFDA, EMA, CDSCO, TGA, WHO, or PIC/S relevant to pharmaceutical GMP, drug registration, dossier requirements, or quality compliance. Return ONLY a JSON array with no markdown or preamble. Each object must have: { "source": "USFDA" or "EMA" or "CDSCO" or "TGA" or "WHO" or "PIC/S", "title": "concise headline under 15 words", "summary": "1-2 sentence factual summary under 40 words", "date": "Month YYYY" }. Exactly 8 items. No extra text.`
+        }]
+      })
+    });
+
+    const data = await res.json();
+    let jsonText = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('');
+    jsonText = jsonText.replace(/```json|```/g, '').trim();
+
+    try {
+      allUpdates = JSON.parse(jsonText);
+    } catch {
+      const match = jsonText.match(/\[[\s\S]*\]/);
+      if (match) allUpdates = JSON.parse(match[0]);
+    }
+
+    if (!Array.isArray(allUpdates) || !allUpdates.length) throw new Error('No data');
+    renderUpdates(allUpdates);
+
+  } catch {
+    list.innerHTML = `
+      <div class="update-card"><p class="update-source">USFDA</p><p class="update-title">Guidance on Nitrosamine Impurities in Human Drugs</p><p class="update-summary">FDA recommends steps manufacturers should take to detect and prevent unacceptable levels of nitrosamine impurities in pharmaceutical products.</p><p class="update-date">Live feed temporarily unavailable — please check back shortly</p></div>
+      <div class="update-card"><p class="update-source">EMA</p><p class="update-title">Revised Annex 11 on Computerised Systems</p><p class="update-summary">EMA published revised guidance on computerised systems used in GMP-regulated environments, focusing on data integrity and electronic records.</p><p class="update-date">Live feed temporarily unavailable — please check back shortly</p></div>
+      <div class="update-card"><p class="update-source">CDSCO</p><p class="update-title">Updated Requirements for New Drug Applications</p><p class="update-summary">CDSCO issued updated dossier requirements for new drug and clinical trial applications under the New Drugs and Clinical Trials Rules 2019.</p><p class="update-date">Live feed temporarily unavailable — please check back shortly</p></div>
+    `;
+  }
+})();
+</script>
+</body>
+</html>
